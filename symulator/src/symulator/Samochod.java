@@ -48,10 +48,7 @@ public class Samochod {
         }
     }
 
-    /**
-     * Metoda do zmiany biegu (zgodnie z logiką - wymaga sprzęgła).
-     * Rozbudowa funkcjonalności[cite: 121].
-     */
+
     public void zmienBieg(int bieg) {
         if (!stanWlaczenia) {
             System.out.println("Nie można zmienić biegu - silnik wyłączony.");
@@ -64,13 +61,11 @@ public class Samochod {
         } else if (bieg < skrzynia.getAktualnyBieg()) {
             skrzynia.zmniejszBieg();
         }
-        // W realistycznym scenariuszu tu byłaby walidacja, czy bieg = skrzynia.getAktualnyBieg()
+
         sprzeglo.zwolnij();
     }
 
-    /**
-     * Wyświetla aktualny stan samochodu[cite: 115].
-     */
+
     public String getStan() {
         return "--- STAN SAMOCHODU ---\n" +
                 "Silnik: " + (stanWlaczenia ? "WŁĄCZONY" : "WYŁĄCZONY") + "\n" +
