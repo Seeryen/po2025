@@ -1,6 +1,7 @@
 module com.example.samgui {
     requires javafx.controls;
     requires javafx.fxml;
+    requires javafx.base;
 
 
     opens com.example.samgui to javafx.fxml;
